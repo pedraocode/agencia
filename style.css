@@ -1,0 +1,118 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0f1117;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 20px;
+    }
+
+    header img {
+      height: 50px;
+      margin: 10px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 20px 0 10px;
+    }
+
+    h1 span {
+      color: #ff4c29;
+    }
+
+    p.subtexto {
+      color: #ccc;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .video-container {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      border: 5px solid #ff4c29;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 450px;
+    }
+
+    .icons-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .icon-box {
+      width: 60px;
+      height: 60px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+
+    .cta-button {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+
+    .cta-button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      .video-container iframe {
+        height: 250px;
+      }
+
+      .icon-box {
+        width: 50px;
+        height: 50px;
+      }
+    }
+ .video-container::before,
+.video-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ff4c29; /* cor laranja */
+  z-index: 1;
+}
+
+.video-container::before {
+  top: -30px; /* ajusta a altura da linha superior */
+}
+
+.video-container::after {
+  bottom: -30px; /* ajusta a altura da linha inferior */
+}
